@@ -16,5 +16,5 @@
 ---
 
 ## Picture
-![Embedded Video Streaming Project](images/img1.jpeg)
+<img src="images/img1.jpeg" alt="Embedded Video Streaming Project" width="300">
 ---
