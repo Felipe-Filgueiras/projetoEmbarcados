@@ -16,5 +16,5 @@
 ---
 
 ## Picture
-![Embedded Video Streaming Project](images/img1.jpg)
+![Embedded Video Streaming Project](images/img1.jpeg)
 ---
