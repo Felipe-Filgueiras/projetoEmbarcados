@@ -31,6 +31,7 @@
 
 ## Items Used (Hardware)
 -ESP32-WROVER-Dev
+
 -Câmera
 
 ## Apps and Tools
