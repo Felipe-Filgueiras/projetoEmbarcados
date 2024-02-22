@@ -1,10 +1,37 @@
 # Project README: Embedded Video Streaming Project
 
 ## Instructions
----
+-Etapas Gerais:
+
+  Conectar a Câmera à ESP32:
+        Conecte a câmera (por exemplo, OV2640) à ESP32-WROVER-Dev seguindo o esquema de pinos especificado nas documentações.
+
+  Desenvolver o Software:
+        Use a IDE Arduino ou PlatformIO para desenvolver o software na ESP32.
+        Utilize bibliotecas para capturar imagens da câmera e transmiti-las ao vivo.
+
+  Configurar a Transmissão de Vídeo:
+        Configure o ESP32 para transmitir as imagens da câmera por meio de um protocolo de transmissão de vídeo, como RTSP (Real-Time Streaming Protocol) ou MJPEG (Motion JPEG).
+
+  Implementar a Detecção de Fadiga:
+        Desenvolva ou integre um algoritmo de detecção de fadiga do motorista. Pode envolver técnicas de processamento de imagem, como detecção de olhos fechados, bocejos, ou análise de movimentos da cabeça.
+
+  Integração e Teste:
+        Integre a detecção de fadiga ao fluxo de vídeo.
+        Realize testes para garantir que o sistema detecta corretamente a fadiga do motorista.
+
+  Transmissão de Dados:
+        Pode ser necessário implementar uma solução para transmitir dados relevantes para um servidor ou outro dispositivo, dependendo dos requisitos do seu projeto.
+
+  Implementar Medidas de Segurança:
+        Implemente medidas de segurança para garantir que a transmissão de imagens e dados seja segura e privada.
+
+  Otimização e Melhorias:
+        Otimize o código e faça melhorias conforme necessário para garantir um desempenho eficiente e uma detecção confiável.
 
 ## Items Used (Hardware)
----
+-ESP32-WROVER-Dev
+-Câmera
 
 ## Apps and Tools
 ---
