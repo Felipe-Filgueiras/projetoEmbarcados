@@ -1,4 +1,4 @@
-# Project README: Embedded Video Streaming Project
+# Project README: Detecção de Fadiga em Motoristas.
 
 ## Instructions
 -Etapas Gerais:
