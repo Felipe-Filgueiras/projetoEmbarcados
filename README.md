@@ -2,6 +2,10 @@
 
 # Brainstorming
 
+
+Idéia 1 (Gabriel Rosa)
+
+
 Sistema de som integrado na própria placa, fazendo com que erros humanos independam para o seu funcionamento.
 
 Quando integrado no telefone, há diversas variáveis para interromper o funcionamento do mesmo.
