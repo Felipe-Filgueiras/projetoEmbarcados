@@ -1,5 +1,12 @@
 # Project README: Detecção de Fadiga em Motoristas.
 
+# Brainstorming
+
+Sistema de som integrado na própria placa, fazendo com que erros humanos independam para o seu funcionamento.
+
+Quando integrado no telefone, há diversas variáveis para interromper o funcionamento do mesmo.
+Ex: Perda de telefone, esquecimento do telefone na mochila, telefone sem bateria.
+
 ## Instructions
 -Etapas Gerais:
 
