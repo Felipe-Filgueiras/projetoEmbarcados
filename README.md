@@ -3,7 +3,7 @@
 # Brainstorming
 
 
-Idéia 1 (Gabriel Rosa)
+Idéia 1 (Gabriel Rosa).
 
 
 Sistema de som integrado na própria placa, fazendo com que erros humanos independam para o seu funcionamento.
