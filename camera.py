@@ -8,14 +8,14 @@ mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
 
 # Captura de Imagem - Webcam
-webcam = cv2.VideoCapture(0) # 0 = Índice padrão de webcam
+# webcam = cv2.VideoCapture(0) # 0 = Índice padrão de webcam
 
 # Captura de Imagem - Streaming
 # IP da câmera
-#camera_ip = "http://192.168.0.3:8080/video"
+camera_ip = "http://172.16.5.91:81/stream"
 
 # Captura de Imagem
-#webcam = cv2.VideoCapture(camera_ip)
+webcam = cv2.VideoCapture(camera_ip)
 
 # Loop para demarcações faciais
 while webcam.isOpened():
