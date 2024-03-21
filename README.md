@@ -46,7 +46,9 @@ Ex: Perda de telefone, esquecimento do telefone na mochila, telefone sem bateria
 -Câmera
 
 ## Apps and Tools
----
+
+## opencv
+- para inverter a image: img = cv.flip(img, 0)
 
 ## How it Streams Video
 ---
