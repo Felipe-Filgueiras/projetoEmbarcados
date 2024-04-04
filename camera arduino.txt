@@ -1,0 +1,127 @@
+#include <Ultrasonic.h>
+#include <WiFi.h>
+#include <PubSubClient.h>
+
+#define INTERVALO_LEITURA 1000 // ms
+#define DISTANCIA_MINIMA 25 // CM
+
+// Sensor 1
+#define PIN_TRIGGER_1 25
+#define PIN_ECHO_1 26
+
+// Sensor 2
+#define PIN_TRIGGER_2 33
+#define PIN_ECHO_2 32
+
+
+#define PIN_BUZZER 32
+
+
+const char* ssid = "Wifizonee";
+const char* password = "sistemasembarcados";
+const char* mqtt_server = "test.mosquitto.org";
+const char* mqtt_user = "";
+const char* mqtt_password = "SENHA_MQTT";
+
+const char* clientName = "arduino_publisher";
+const char* topic = "esp/123";
+
+WiFiClient espClient;
+PubSubClient client(espClient);
+
+void setup_wifi() {
+  delay(10);
+  // Conecte-se à rede Wi-Fi
+  Serial.println();
+  Serial.print("Conectando-se a ");
+  Serial.println(ssid);
+  
+  WiFi.begin(ssid, password);
+  
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+  
+  Serial.println("");
+  Serial.println("Conectado à rede WiFi");
+  Serial.println("Endereço IP: ");
+  Serial.println(WiFi.localIP());
+}
+
+void reconnect() {
+  while (!client.connected()) {
+    Serial.print("Tentando se reconectar ao MQTT Broker...");
+    // Tente se reconectar
+    if (client.connect(clientName, mqtt_user, mqtt_password)) {
+      Serial.println("Conectado");
+    } else {
+      Serial.print("Falha, rc=");
+      Serial.print(client.state());
+      Serial.println(" Tentando novamente em 5 segundos");
+      delay(5000);
+    }
+  }
+}
+
+unsigned int distancia = 0;
+bool vaga_1 = false;
+bool vaga_2 = false;
+
+Ultrasonic ultrasonic_1(PIN_TRIGGER_1, PIN_ECHO_1);
+Ultrasonic ultrasonic_2(PIN_TRIGGER_2, PIN_ECHO_2);
+
+bool isOcupada(unsigned int distancia) {
+  return distancia < DISTANCIA_MINIMA;
+}
+
+const char* createMsg(bool isOcupada, const char* vaga) {
+  static char buf[50]; // Use static to preserve the array beyond the function's scope
+
+  const char *msg = "Vaga ";
+  const char *ocupada = "  OCUPADA\n";
+  const char *disponivel = " DISPONIVEL\n";
+
+  strcpy(buf, msg);
+  strcat(buf, vaga);
+
+  if (isOcupada) {
+    strcat(buf, ocupada);
+  } else {
+    strcat(buf, disponivel);
+  }
+
+  Serial.print(buf);
+
+  return buf; // Return a pointer to the static array
+}
+
+
+void setup() {
+  Serial.begin(115200);
+
+  setup_wifi();
+  client.setServer(mqtt_server, 1883);
+}
+
+void loop() {
+  if (!client.connected()) {
+    reconnect();
+  }
+
+  bool new_vaga_1 = isOcupada(ultrasonic_1.read());
+  bool new_vaga_2 = isOcupada(ultrasonic_2.read());
+
+  if (vaga_1 != new_vaga_1) {
+    vaga_1 = new_vaga_1;
+    client.publish(topic, createMsg(vaga_1, "1"));
+   // Serial.println(client.publish(topic, createMsg(vaga_1, "1")));
+  }
+
+  if (vaga_2 != new_vaga_2) {
+    vaga_2 = new_vaga_2;
+    client.publish(topic, createMsg(vaga_2, "2"));
+  }
+
+  delay(INTERVALO_LEITURA);
+}
