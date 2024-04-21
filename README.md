@@ -3,7 +3,7 @@
 # Brainstorming
 
 
-Idéia 1.
+Ideia 1.
 
 
 Sistema de som integrado na própria placa, fazendo com que erros humanos independam para o seu funcionamento.
