@@ -3,7 +3,7 @@
 # Brainstorming
 
 
-Idéia 1 (Gabriel Rosa).
+Idéia 1.
 
 
 Sistema de som integrado na própria placa, fazendo com que erros humanos independam para o seu funcionamento.
@@ -51,7 +51,7 @@ Ex: Perda de telefone, esquecimento do telefone na mochila, telefone sem bateria
 - para inverter a image: img = cv.flip(img, 0)
 
 ## How it Streams Video
----
+The ESP32 Wrover, a versatile microcontroller module renowned for its robust Wi-Fi and Bluetooth capabilities, offers the ability to stream video through a concise yet efficient process. Leveraging camera modules like the OV7670 or OV2640, the ESP32 captures video frames, transforming them into pixel data for subsequent processing. These frames undergo essential tasks such as resizing, encoding, or compression, optimizing them for transmission across wireless networks. Harnessing its built-in Wi-Fi or Bluetooth functionalities, the ESP32 establishes seamless connections with receiving devices, facilitating real-time transmission of the processed video frames. Upon reception, these frames are decoded and can be promptly displayed, stored, or further processed as per application requirements. This capability makes the ESP32 Wrover an invaluable tool for diverse applications ranging from remote surveillance to IoT projects necessitating efficient visual data transmission, albeit requiring considerations for bandwidth limitations and processing constraints.
 
 ## Documentation
 -ESP-WROVER-KIT is a highly integrated ultra-low-power development board, with rich peripheral set, Wi-Fi, and Bluetooth connectivity offered by Espressif's flagship SoC, ESP32. Create Internet cameras, smart displays, or Internet radios by connecting LCDs, microphones, and codecs. ESP32 supports JTAG debugging, while the ESP-WROVER-KIT integrates a USB debugger. This makes debugging and tracing complex applications very easy, without the need for any additional hardware. ESP32 is engineered to be fast, smart, and versatile. The ESP-WROVER-KIT complements these characteristics by offering an on-board high-speed Micro-SD card interface, VGA camera interface, as well as a 3.2 SPI LCD panel and I/O expansion capabilities. Have you been developing your applications around the ESP32-WROOM-32 module? Not only does the ESP-WROVER-KIT support the popular ESP-WROOM-32 module, but it also supports ESP32-WROVER module that has additional SPIRAM for your application's use.
