@@ -46,7 +46,7 @@ Este projeto Android Studio foi desenvolvido em Kotlin e utiliza a biblioteca Me
 ❗ *Alerta:*
    - A notificação irá sugerir que o motorista pare o caminhão em um local seguro e descanse.
 
-##🤝🏻 Contribuição
+## 🤝🏻 Contribuição
 
 1. *Fork o projeto.*
 
