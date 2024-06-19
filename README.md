@@ -1,4 +1,3 @@
-
 # 📺 Monitoramento de Fadiga para Motoristas de Caminhão
 
 Este projeto Android Studio foi desenvolvido em Kotlin e utiliza a biblioteca MediaPipe para detectar pontos faciais de um motorista de caminhão enquanto ele estiver com a câmera do celular apontada para o rosto. O aplicativo monitora sinais de fadiga e envia um alerta ao detectar indícios de cansaço, recomendando que o motorista estacione o caminhão e pare de dirigir para evitar acidentes.
@@ -53,31 +52,41 @@ Este projeto Android Studio foi desenvolvido em Kotlin e utiliza a biblioteca Me
 2. *Crie uma nova branch:*
 
    
-   bash
+   ```bash
    git checkout -b minha-nova-funcionalidade
+      ```
    
 4. *Faça as alterações desejadas e commit:*
 
 
-   bash
+   ```bash
    git commit -m "Adiciona minha nova funcionalidade"
+   ```
    
 5. *Envie para o branch original:*
 
    
-   bash
+  ```bash
    git push origin minha-nova-funcionalidade
-   
+   ```
 7. *Crie um Pull Request.*
 
 
-## Contato
+---
 
-👨‍💻 *Desenvolvedores:* Felipe Tavares, Felipe Filgueiras, Gabriel Rosa, Felipe Seda e Giovanna Amaral.
+## 👨‍💻 Desenvolvedores
+
+👦🏽Gabriel Rosa
+
+🧔Felipe Filgueiras
+
+👦🏻Felipe Tavares
+
+👦🏻Felipe Seda
+
+👩🏻Giovanna Amaral
 
 Sinta-se à vontade para enviar sugestões, reportar bugs ou contribuir com o projeto!
-
----
 
 Agradecemos por utilizar nosso aplicativo e contribuir para a segurança nas estradas.
 
