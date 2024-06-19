@@ -74,7 +74,7 @@ Sinta-se à vontade para enviar sugestões, reportar bugs ou contribuir com o pr
 
 Agradecemos por utilizar nosso aplicativo e contribuir para a segurança nas estradas.
 
-# Brainstorming
+# Brainstorming - Ideias de um projeto anterior
 
 
 Ideia 1.
