@@ -13,6 +13,8 @@ Este projeto Android Studio foi desenvolvido em Kotlin e utiliza a biblioteca Me
 - *Kotlin:* Linguagem principal para o desenvolvimento do aplicativo.
 - *Android Studio:* IDE utilizada para o desenvolvimento do projeto.
 - *MediaPipe:* Biblioteca utilizada para a detecção de pontos faciais.
+- *TensorFlow:* utilizado na detecção de fadiga para motoristas devido à sua capacidade de processar e analisar grandes quantidades de dados provenientes de câmeras e sensores. 
+
 
 ## 💿 Instalação
 
